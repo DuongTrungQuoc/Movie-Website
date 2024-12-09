@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+
+/* những thứ cơ bản apply lên giao diện */
+@layer base{
+  body {
+    @apply font-barlow text-primary;
+    
+  }
+
+  h1 {
+    @apply text-5xl font-bold;
+  }
+
+  h2{
+    @apply text-4xl font-semibold;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  h4 {
+    @apply text-2xl;
+  }
+}
+
+/* custom riêng cho một số components */
+@layer components{
+  .btn{
+    @apply border-2 border-primary px-4 py-2 rounded text-xl font-semibold cursor-pointer uppercase hover:bg-primary hover:text-white;
+  }
+  .card{
+    @apply relative bg-primary rounded-md overflow-hidden shadow-md shadow-primary hover:shadow-lg hover:shadow-primary;
+  }
+  .badge{
+    @apply bg-cyan-50 flex justify-between items-center rounded-md absolute top-2 left-2 p-2 min-w-[25%];
+  }
+}
